@@ -1,0 +1,82 @@
+@import 'fonts.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar */
+
+.scroll::-webkit-scrollbar {
+    @apply w-2 h-2
+}
+
+.scroll::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full
+}
+
+.on-hover-scroll::-webkit-scrollbar {
+    @apply w-1 h-1;
+}
+
+.on-hover-scroll::-webkit-scrollbar-track {
+    @apply bg-transparent rounded-none absolute;
+}
+
+.on-hover-scroll::-webkit-scrollbar-thumb {
+    @apply bg-transparent transition-all duration-200 ease-in-out rounded-full;
+}
+
+.on-hover-scroll:hover::-webkit-scrollbar-thumb {
+    @apply bg-black/20;
+}
+
+.scrollinvisible::-webkit-scrollbar {
+    @apply w-1 h-1;
+}
+
+.scrollinvisible::-webkit-scrollbar-track {
+    @apply bg-transparent rounded-none absolute;
+}
+
+.scrollinvisible::-webkit-scrollbar-thumb {
+    @apply bg-transparent transition-all duration-200 ease-in-out rounded-full;
+}
+ 
+
+
+/*Masking Images*/ 
+
+.home-3rd{
+    -webkit-mask-image: url(../img/svgs/home-3rd.svg);
+  mask-image: url(../img/svgs/home-3rd.svg); -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat; 
+}
+
+
+
+/*FAQs*/
+.faqs {
+    .plus {
+        @apply block;
+    }
+
+    .minus {
+        @apply hidden;
+    }
+
+    .selected-faq {
+        .faq-circle{
+            @apply bg-navy-2
+        }
+        .plus {
+            @apply hidden;
+        }
+
+        .minus {
+            @apply block;
+        }
+    }
+}
