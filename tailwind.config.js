@@ -182,6 +182,7 @@ module.exports = {
             // => @media (min-width: 1350px) { ... }  
 
         },
+
     },
 
     variants: {
@@ -194,4 +195,6 @@ module.exports = {
         require('@tailwindcss/forms'),
         require('@tailwindcss/line-clamp'),
     ],
+
+  
 }
